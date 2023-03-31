@@ -38,6 +38,9 @@ img {
     --button-color: #FFFFFF; 
     --logo-footer: #F4F4FD;
     --button-border: #E7E9FC;
+    --icon-background: #404BBF;
+    --icon-color: #8E8F99;
+    --icon-footer: #31D0AA;
 }
 
 a {
@@ -147,7 +150,10 @@ h1, h2, h3, h4, p {
 /* section1 */
 
 .hero{
-    background-color: var(--main-color);
+    background-image: linear-gradient( rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/people-office1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin-left: auto;
     margin-right: auto;
     padding-top: 188px;
@@ -190,9 +196,32 @@ h1, h2, h3, h4, p {
     0px 1px 1px rgba(46, 47, 66, 0.16), 
     0px 2px 1px rgba(46, 47, 66, 0.08);
     cursor: pointer;
+    background-color: var(--icon-background);
 }
 
 /* Section2 */
+
+.benefits-list {
+    
+}
+.benefits-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--logo-footer);
+    height: 112px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.benefits-item {
+    width: calc((100% - 72px) / 4);
+    margin-right: 24px;
+}
+
+.benefits-item:last-child {
+    margin-right: 0;
+}
 
 .benefits-head {
     font-size: 20px;
@@ -234,6 +263,7 @@ h1, h2, h3, h4, p {
 .section-doing {
     padding-top: 0;
 }
+
 /* Section4 */
 
 
@@ -259,6 +289,72 @@ h1, h2, h3, h4, p {
     text-align: center;
 }
 
+.team-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.team-soc-item{
+    width: 40px;
+    height: 40px;
+}
+
+.team-soc-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.team-soc-icon {
+    fill: var(--logo-footer);
+}
+
+.team-soc-link:hover,.team-soc-link:focus{
+    background-color: var(--icon-background);
+}
+
+
+/* section 4 */
+
+.customer {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.customer-list{
+    display: flex;
+    gap: 24px;
+}
+
+.customer-item {
+    width: calc((100% - 150px) / 6);
+    height: 90px;
+}
+
+.customer-link{
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--icon-color);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-color);
+}
+
+.suctomer-icon{
+    fill: currentColor;
+}
+
+.customer-link:is(:hover, :focus) {
+    border-color: var(--icon-background);
+    color: var(--icon-background);
+}
 /* footer */
 
 .footer {
@@ -273,6 +369,42 @@ h1, h2, h3, h4, p {
     margin-top: 16px;
     width: 264px;
 }
+
+.footer-list {
+    display: flex;
+    gap: 16px;
+}
+
+.footer-item {
+    width: 40px;
+    height: 40px;
+}
+
+.footer-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 16px;
+}
+
+.footer-link:is(:hover, :focus) {
+    background-color: var(--icon-footer);
+}
+
+.footer-icon {
+    fill: var(--logo-footer);
+}
+
+.footer-main {
+    display: flex;
+    gap: 120px;
+    align-items: baseline;
+}
+
 
 
 /* portfolio Button */
